@@ -106,3 +106,7 @@ venv.bak/
 # enviroment
 enviroment/*
 django-env/*
+
+#.vscode
+/.vscode
+.vscode/*
