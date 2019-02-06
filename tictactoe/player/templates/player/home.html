@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Home</title>
-</head>
-<body>
-  <h1>Welcome</h1>
-  Ther are currently {{ ngames }} games in the database
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Welcome {{ user.username }}</h1>
+  These are your active games:
+
+  <ul>
+    {% for g in games %}
+    <li>Game {{ g.id }}: {{ g.first_player }} vs  {{ g.second_player }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

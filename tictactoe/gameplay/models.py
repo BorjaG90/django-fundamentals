@@ -7,16 +7,16 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class GamesQuerySet(models.QuerySet):
-    def games_for_user(self, user):
+  def games_for_user(self, user):
 
-      return self.filter(
-        Q(first_player = user) | Q(second_player = user)
-      )
+    return self.filter(
+      Q(first_player=user) | Q(second_player=user)
+    )
 
-    def active(self):
-      return self.filter(
-        Q(status='F') | Q(status='S')
-      )
+  def active(self):
+    return self.filter(
+      Q(status='F') | Q(status='S')
+    )
 
 GAME_STATUS_CHOICES = (
   ('F', 'First Player To Move'),
@@ -39,6 +39,7 @@ class Game(models.Model):
     choices=GAME_STATUS_CHOICES)
 
   objects = GamesQuerySet.as_manager()
+
   def __str__(self):
     return "{0} vs {1}".format(
       self.first_player, self.second_player
