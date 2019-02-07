@@ -9,4 +9,8 @@
     <li>Game {{ g.id }}: {{ g.first_player }} vs  {{ g.second_player }}</li>
     {% endfor %}
   </ul>
+
+  <a href="{% url 'player_new_invitation' %}">
+    Invite another user to play a game
+  </a>
 {% endblock %}
