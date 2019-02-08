@@ -13,5 +13,6 @@ urlpatterns = [
     name="player_logout"),
   url(r'new_invitation$', new_invitation, name="player_new_invitation"),
   url(r'accept_invitation/(?P<id>\d+)/$',
-    accept_invitation, name="player_accept_invitation")
+    accept_invitation, name="player_accept_invitation"),
+  url(r'signup$', SignupView.as_view(), name='player_signup'),
 ]
