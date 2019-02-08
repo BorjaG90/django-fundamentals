@@ -11,9 +11,11 @@ from gameplay.models import Game
 def home(request):
   my_games = Game.objects.games_for_user(request.user)
   active_games = my_games.active()
+  finised_games = my_games.difference(active_games)
   invitations = request.user.invitations_received.all()
   return render(request, "player/home.html", {
     'games': active_games,
+    'finised_games': finised_games,
     'invitations': invitations
   })
 
