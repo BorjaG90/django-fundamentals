@@ -1,6 +1,6 @@
 # django-fundamentals
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-[![course-project](https://img.shields.io/badge/Project-Course-orange.svg)]
+![course-project](https://img.shields.io/badge/Project-Course-orange.svg)
 
 Exercises and code for the Pluralsight course: Django Fundamentals by Reindert-Jan Ekker
 
